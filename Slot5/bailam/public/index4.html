@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FPT University</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --fpt-orange: #FF6B35;
+            --fpt-blue: #2E86AB;
+            --fpt-green: #A23B72;
+            --fpt-light-orange: #FFB084;
+            --fpt-bg-orange: #F4A261;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .navbar-custom {
+            background: linear-gradient(135deg, var(--fpt-orange) 0%, var(--fpt-bg-orange) 100%);
+            padding: 1rem 0;
+        }
+        
+        .logo-container {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        
+        .fpt-logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .logo-letter {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: white;
+        }
+        
+        .logo-f { background-color: var(--fpt-blue); }
+        .logo-p { background-color: var(--fpt-orange); }
+        .logo-t { background-color: #28A745; }
+        
+        .logo-text {
+            color: var(--fpt-blue);
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-left: 0.5rem;
+        }
+        
+        .university-title {
+            color: var(--fpt-orange);
+            font-size: 2rem;
+            font-weight: bold;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .navbar-nav .nav-link {
+            color: white !important;
+            font-weight: 500;
+            margin: 0 1rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .navbar-nav .nav-link:hover {
+            color: #FFE4D6 !important;
+            transform: translateY(-2px);
+        }
+        
+        .navbar-nav .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 50%;
+            background-color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .navbar-nav .nav-link:hover::after {
+            width: 100%;
+            left: 0;
+        }
+        
+        .main-content {
+            min-height: 60vh;
+            padding: 3rem 0;
+        }
+        
+        .section-title {
+            color: #333;
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .section-content {
+            color: #666;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .contact-info {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .footer-custom {
+            background: linear-gradient(135deg, var(--fpt-light-orange) 0%, var(--fpt-bg-orange) 100%);
+            color: white;
+            padding: 1.5rem 0;
+            margin-top: 3rem;
+        }
+        
+        .footer-text {
+            margin: 0;
+            text-align: center;
+            font-size: 0.95rem;
+        }
+        
+        .section-divider {
+            height: 3px;
+            background: linear-gradient(to right, var(--fpt-blue), var(--fpt-orange), #28A745);
+            border: none;
+            margin: 3rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            .university-title {
+                font-size: 1.5rem;
+            }
+            
+            .logo-letter {
+                width: 35px;
+                height: 35px;
+                font-size: 1rem;
+            }
+            
+            .section-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="navbar-custom">
+        <div class="container">
+            <div class="logo-container">
+                <div class="fpt-logo">
+                    <div class="logo-letter logo-f">F</div>
+                    <div class="logo-letter logo-p">P</div>
+                    <div class="logo-letter logo-t">T</div>
+                    <span class="logo-text">Education</span>
+                </div>
+                <h1 class="university-title">FPT University</h1>
+            </div>
+            
+            <!-- Navigation -->
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid justify-content-center">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#home">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#about">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#contact">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- About Section -->
+            <section id="about" class="mb-5">
+                <h2 class="section-title">About</h2>
+                <div class="section-content">
+                    <p>This is the about section of the website.</p>
+                    <p>FPT University is a leading private university in Vietnam, established with the mission to provide high-quality education in technology, business, and creative fields. We are committed to developing skilled professionals who can contribute to the digital transformation of society.</p>
+                </div>
+            </section>
+
+            <hr class="section-divider">
+
+            <!-- Contact Section -->
+            <section id="contact">
+                <h2 class="section-title">Contact</h2>
+                <div class="contact-info">
+                    <div class="row">
+                        <div class="col-md-8 mx-auto">
+                            <p class="section-content mb-3">For any inquiries, please contact us at example@example.com.</p>
+                            <div class="row mt-4">
+                                <div class="col-md-6 mb-3">
+                                    <h5 class="text-primary">📧 Email</h5>
+                                    <p>admissions@fpt.edu.vn</p>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <h5 class="text-primary">📞 Phone</h5>
+                                    <p>+84 (0) 123 456 789</p>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <h5 class="text-primary">📍 Address</h5>
+                                    <p>Hoa Lac Hi-Tech Park, Hanoi, Vietnam</p>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <h5 class="text-primary">🕒 Office Hours</h5>
+                                    <p>Mon - Fri: 8:00 AM - 6:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-custom">
+        <div class="container">
+            <p class="footer-text">© 2023 Website. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Smooth Scrolling Script -->
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Update active navigation link on scroll
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                if (scrollY >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
