@@ -14,14 +14,19 @@ function App() {
   // Lọc nhân viên phòng IT
   const itEmployees = employees.filter(emp => emp.department === "IT");
 
+  const employeeList = [];
+  for (let i = 0; i < employees.length; i++) {
+    const employee = employees[i];
+    employeeList.push(
+      <li key={employee.id}>{employee.name}</li>
+    );
+  }
+
+  
   return (
     <div style={{ padding: "20px" }}>
       <h1>IT Department Employees</h1>
-      <ul>
-        {itEmployees.map((employee, index) => (
-          <li key={employee.id || index}>{employee.name}</li>
-        ))}
-      </ul>
+      <ul>{employeeList}</ul>
     </div>
   );
 }
