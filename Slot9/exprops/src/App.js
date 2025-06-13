@@ -1,11 +1,12 @@
 // App.js
 import "./App.css";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Card } from "react-bootstrap";
 import Welcome from "./components/Welcome";
 import UserProfile from "./components/UserProfile";
 import NameList from "./components/NameList";
 import StudentCard from "./components/StudentCard";
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 function App() {
   const userData = { name: "thienddhde180618@fpt.edu.vn", age: 12 };
   const namesList = ["thienddhde180618@fpt.edu.vn", "test@fe.edu.vn"];

@@ -6,7 +6,7 @@ function MyInfo() {
     <Container className="my-4">
       <Row>
         <Col>
-          <h1 className="text-primary">Đậu Đoàn Hoàn Thiện</h1>
+          <h1 className="text-danger">Đậu Đoàn Hoàn Thiện</h1>
           <p className="lead">
             Xin chào! Mình là một lập trình viên React, yêu thích học hỏi và khám phá những công nghệ mới nhaaaaa.
           </p>
