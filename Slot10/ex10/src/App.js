@@ -21,6 +21,7 @@ function App() {
       setSelectedProducts(selectedProducts.filter(id => id !== productId));
     }
   }
+  const myName = 'Thiện';
 
 
   return (
@@ -28,47 +29,54 @@ function App() {
       <div>
         <h1>ViDu1</h1>
         <p>You clicked {count} times</p>
+        <p>{myName}</p>
         <button onClick={() => setCount(count + 1)}>
           Click me
         </button>
+        <button onClick={() => {if(count > 0)  setCount(count - 1)}}>
+          
+          Click me down
+        </button>
+        
       </div>
       <div>
         <h1>ViDu2</h1>
-        <input 
-          type="text" 
-          value={name} 
-          onChange={(e) => {setName(e.target.value);
+        <input
+          type="text"
+          value={name}
+          onChange={(e) => {
+            setName(e.target.value);
             console.log(e.target.value)
-          }} 
+          }}
         />
         <p>My name is {name}</p>
 
-        <input 
-          type="number" 
-          value={age} 
-          onChange={(e) => setAge(parseInt(e.target.value, 10))} 
+        <input
+          type="number"
+          value={age}
+          onChange={(e) => setAge(parseInt(e.target.value, 10))}
         />
         <p>My age is {age}</p>
       </div>
       <div>
         <h1>ViDu3</h1>
-      {products.map(product => (
-        <div key={product.id}>
-          <input
-            type="checkbox"
-            id={product.id}
-            value={product.id}
-            checked={selectedProducts.includes(product.id)}
-            onChange={handleCheckboxChange}
-          />
-          <label htmlFor={product.id}>{product.name}</label>
-        </div>
-      ))}
+        {products.map(product => (
+          <div key={product.id}>
+            <input
+              type="checkbox"
+              id={product.id}
+              value={product.id}
+              checked={selectedProducts.includes(product.id)}
+              onChange={handleCheckboxChange}
+            />
+            <label htmlFor={product.id}>{product.name}</label>
+          </div>
+        ))}
 
-      {selectedProducts.length > 0 && (
-        <p>Bạn đã chọn các sản phẩm: {selectedProducts.map(id => products.find(p => p.id === id).name).join(', ')}</p>
-      )}
-    </div>
+        {selectedProducts.length > 0 && (
+          <p>Bạn đã chọn các sản phẩm: {selectedProducts.map(id => products.find(p => p.id === id).name).join(', ')}</p>
+        )}
+      </div>
 
     </div>
   );
